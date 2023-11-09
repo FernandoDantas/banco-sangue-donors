@@ -1,0 +1,117 @@
+<div class="bg-login">
+  <div id="layoutAuthentication">
+    <div id="layoutAuthenticaition_content">
+      <main>
+        <div class="container">
+          <div class="row justify-content-center mt-5">
+            <div class="col-lg-5">
+              <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header">
+                  <h3 class="text-center font-weight-light my-4">
+                    <div *ngIf="!signingup">
+                      <i class="fa fa-user-circle fa-2x" style="color: #79797a;" aria-hidden="true"></i>
+                    </div>
+                    <div *ngIf="signingup">
+                      <i class="fa fa-user-plus fa-2x" style="color: #79797a;" aria-hidden="true"></i>
+                    </div>
+                  </h3>
+                </div>
+                <div class="card-body">
+
+                  <div *ngIf="msgSuccess" class="alert alert-success">
+                    {{msgSuccess}}
+                  </div>
+
+                  <div class="alert alert-danger" *ngIf="erro">
+                    {{ erro }}
+                  </div>
+
+                  <form [formGroup]="form" (ngSubmit)="signingup ?  add() : onSubmit()">
+
+                    <div class="form-group">
+                      <label class="small mb-1">Email</label>
+                      <input type="text"
+                      class="form-control py-4"
+                      [ngClass]="aplyCssError('userEmail')"
+                      placeholder="E-mail"
+                      formControlName="userEmail">
+
+                      <field-control-erro
+                          [showErro]="verifyValidTouched('userEmail')"
+                          msgErro="E-mail é obrigatório"
+                        >
+                        </field-control-erro>
+
+                        <field-control-erro
+                          [showErro]="verifyEmailValid()"
+                          msgErro="E-mail inválido"
+                        >
+                        </field-control-erro>
+                    </div>
+
+                      <div class="form-group" *ngIf="signingup">
+                        <label class="small mb-1">Login</label>
+                        <input type="text"
+                        class="form-control py-4"
+                        [ngClass]="aplyCssError('userName')"
+                        placeholder="Login"
+                        formControlName="userName">
+
+                        <field-control-erro
+                          [showErro]="verifyValidTouched('userName')"
+                          msgErro="Login é obrigatório"
+                        >
+                        </field-control-erro>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="small mb-1">Senha</label>
+                        <input type="password"
+                        class="form-control py-4"
+                        [ngClass]="aplyCssError('cryptedPass')"
+                        placeholder="Senha"
+                        formControlName="cryptedPass">
+
+                        <field-control-erro
+                          [showErro]="verifyValidTouched('cryptedPass')"
+                          msgErro="Senha é obrigatória e deve conter no mínimo 6 caracteres"
+                        >
+                        </field-control-erro>
+                      </div>
+
+                      <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                        <button type="submit" class="btn btn-primary" *ngIf="!signingup" [disabled]="!form.valid">
+                          Entrar
+                        </button>
+
+                        <button type="button" class="btn btn-success"
+                          (click)="add()"
+                          *ngIf="signingup" [disabled]="!form.valid">
+                            Cadastrar
+                        </button>
+
+                        <button type="button"
+                          (click)="cancelRegistration()"
+                          class="btn btn-danger ml-1" *ngIf="signingup">
+                          Cancelar
+                        </button>
+                      </div>
+                  </form>
+                </div>
+
+                <div class="card-footer text-center" *ngIf="!signingup">
+                  <div class="small">
+                    <a href="#" (click)="prepareRegister($event)">
+                        Não possui Usuário? Cadastre-se!
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  </div>

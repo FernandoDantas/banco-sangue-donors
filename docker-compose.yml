@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  arquetipo:
+    container_name: arquetipo
+    image: postgres:12.2
+    environment:
+      POSTGRES_USER: a001
+      POSTGRES_PASSWORD: q1w2e3
+    ports:
+      - "5432:5432"

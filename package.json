@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@auth0/angular-jwt": "^5.2.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.7.1"
+  }
+}
