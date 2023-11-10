@@ -31,6 +31,3 @@ npm install --save jquery
 npm install --save bootstrap@4.3.1
 npm install @auth0/angular-jwt
 
-https://www.youtube.com/watch?v=OG8vbzVuFoc
-https://github.com/wbaamaral/algamoney-ui
-

@@ -1,9 +1,9 @@
-# banco-sangue-donors
+# Projeto Bando de sangue
 Sistema desenvolvido como teste para a empresa WK technology
 
-# Arquétipo Spring Rest
+## Arquétipo Spring Rest
 
-Foi utilizado um arquétipo Spring Rest para iniciar uma nova aplicação com segurança, OAuth2, JWT, hateoas, Swagger entre outras configurações de minah propriedade
+Foi utilizado um arquétipo Spring Rest para iniciar uma nova aplicação com segurança, OAuth2, JWT, hateoas, Swagger entre outras configurações de minha propriedade
  
 ### Tecnologias utilizadas no back
 
@@ -14,9 +14,11 @@ Foi utilizado um arquétipo Spring Rest para iniciar uma nova aplicação com se
 * Lombok
 * ModelMapper
 * POO
+* Flyway
 * Rest
 * Maven
 * JSON
+* Docker
 
 ### Tecnologias utilizadas no front-end
 * Angular versão 13
@@ -26,6 +28,31 @@ Foi utilizado um arquétipo Spring Rest para iniciar uma nova aplicação com se
 * Javascript
 * Typescript
 * Ajax
+
+### Flyway
+```
+O projeto utiliza o Flyway que é uma ferramenta de migração de banco de dados de código aberto. Sendo assim, ao dar start no back ele cria as tabela e popula o banco de dados criado com alguns registros iniciais.
+```
+
+### Para criar a imagem docker executa o comando:
+```shell script
+docker-compose up
+```
+
+### Para iniciar o docker já com a imagem criada executa o comando:
+```shell script
+docker-compose up -d
+```
+
+### Para encerrar a execução da imagem com o banco postgres criado utilizar o comando:
+```shell script
+docker stop arquetipo
+```
+
+### Para executar o start com o banco postgres criado utilizar o comando:
+```shell script
+docker start arquetipo
+```
 
 #### Url padarão do back
 ```
