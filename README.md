@@ -3,7 +3,7 @@ Sistema desenvolvido como teste para a empresa WK technology
 
 ## Arquétipo Spring Rest
 
-Foi utilizado um arquétipo Spring Rest para iniciar uma nova aplicação com segurança, OAuth2, JWT, hateoas, Swagger entre outras configurações de minha propriedade
+> Foi utilizado um arquétipo Spring Rest para iniciar uma nova aplicação com segurança, OAuth2, JWT, hateoas, Swagger entre outras configurações de minha propriedade
  
 ### Tecnologias utilizadas no back
 
@@ -30,9 +30,9 @@ Foi utilizado um arquétipo Spring Rest para iniciar uma nova aplicação com se
 * Ajax
 
 ### Flyway
-```
-O projeto utiliza o Flyway que é uma ferramenta de migração de banco de dados de código aberto. Sendo assim, ao dar start no back ele cria as tabela e popula o banco de dados criado com alguns registros iniciais.
-```
+
+>O projeto utiliza o Flyway que é uma ferramenta de migração de banco de dados de código aberto. Sendo assim, ao dar start no back ele cria as tabela e popula o banco de dados criado com alguns registros iniciais.
+
 
 ### Para criar a imagem docker executa o comando:
 ```shell script
@@ -71,6 +71,5 @@ http://localhost:8080/swagger-ui.html#/
 ```
 ### Arquivo de Collection Json - Usar no Postman
 
-```
-  - O arquivo de collection.json esta na pasta docs. Pode copiar ele e importar no postman para testar os payloads da api
-```
+> O arquivo de collection.json esta na pasta docs. Pode copiar ele e importar no postman para testar os payloads da api
+
